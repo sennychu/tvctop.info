@@ -1,9 +1,0 @@
---- 
-gem: --remote --gen-rdoc --run-tests -v
-
-gemhome: /home7/tvctopin/ruby/gems
-gempath: /home7/tvctopin/ruby/lib/gems:/home7/tvctopin/.gem/ruby/1.8
-gemcache: /home7/tvctopin/ruby/gems/cache
-gembin: /home7/tvctopin/ruby/gems/bin
-rdoc: --inline-source --line-numbers
-
