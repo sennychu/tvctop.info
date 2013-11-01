@@ -1,4 +1,0 @@
-do{ my $x = {
-       'install_base' => '/home7/tvctopin/perl5'
-     };
-$x; }

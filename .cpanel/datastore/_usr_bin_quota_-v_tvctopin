@@ -1,5 +1,0 @@
-Disk quotas for user tvctopin (uid 2883):
-Filesystem    blocks     quota limit grace files quota limit grace
-/dev/sdi1   2070929    0     0           73154 0     0
-/dev/sda1   2          0     0           33    0     0
-/dev/sda2   0          0     0           2     0     0
