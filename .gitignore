@@ -4,6 +4,7 @@
 !/CONTRIBUTING.md
 !/README.md
 !/SUPPORTERS.md
+!/.*
 /etc
 /*.pyc
 /.DS_Store
