@@ -1,0 +1,19 @@
+Testing connection speed...(using fast method)...Done
+Ping:2 (ticks) Testing connection speed to cpan.develooper.com using pureperl...(cached .. 22266.67 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.schatt.com using pureperl...(cached .. 21833.33 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.knowledgematters.net using pureperl...(cached .. 18933.33 bytes/s)...Done
+Ping:7 (ticks) Testing connection speed to cpan.mirrors.tds.net using pureperl...(cached .. 11820.00 bytes/s)...Done
+Ping:4 (ticks) Testing connection speed to mirrors.servercentral.net using pureperl...(cached .. 11220.00 bytes/s)...Done
+Five usable mirrors located
+Ping:0 (ticks) Testing connection speed to 67.20.126.88 using pureperl...Error (404) while fetching url http://67.20.126.88/pub/CPAN/MIRRORING.FROM
+Warning: removing bad mirror 67.20.126.88 from url list
+test failed...Done
+Mirror Check passed for cpan.develooper.com (/index.html)
+=MODLIST
+Class::XML::Parser=0.901=Parses an XML message into a class structure
+NexposeSimpleXML::Parser=undef=Parse NeXpose Simple XML scan data with Perl
+RPC::XML::Parser::XS=0.04=Fast XML−RPC parser written in C
+XML::Parser=2.41=Flexible fast parser with plug-in styles
+XML::Parser::Generic=undef=Generic and very fast XML parser generator.
+XML::Parser::Nodes=0.08=Methods to access & recurse XML::Parser Tree
+XML::Parser::Wrapper=0.15=Simple object wrapper around XML::Parser

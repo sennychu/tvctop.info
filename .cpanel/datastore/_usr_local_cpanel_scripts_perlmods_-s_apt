@@ -1,0 +1,25 @@
+Testing connection speed...(using fast method)...Done
+Ping:2 (ticks) Testing connection speed to cpan.mirrors.hoobly.com using pureperl...(cached .. 30900.00 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.develooper.com using pureperl...(cached .. 22233.33 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.schatt.com using pureperl...(cached .. 21800.00 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.knowledgematters.net using pureperl...(cached .. 18933.33 bytes/s)...Done
+Ping:6 (ticks) Testing connection speed to cpan-sj.viaverio.com using pureperl...(cached .. 8842.86 bytes/s)...Done
+Five usable mirrors located
+Ping:0 (ticks) Testing connection speed to 67.20.126.88 using pureperl...Error (404) while fetching url http://67.20.126.88/pub/CPAN/MIRRORING.FROM
+Warning: removing bad mirror 67.20.126.88 from url list
+test failed...Done
+Mirror Check passed for cpan.mirrors.hoobly.com (/index.html)
+=MODLIST
+Authen::PluggableCaptcha=0.05=object oriented framework for CAPTCHA
+CSS::Adaptor::Whitelist=0.006=Filter out potentially dangerous CSS
+Captcha::AreYouAHuman=0.000030=Captcha::AreYouAHuman Captcha Alternative
+Config::Apt::Sources=0.10=OO module for parsing apt sources.list files
+DBIx::TableAdapter=undef=A object-relational table adapter class
+File::AptFetch=v0.0.9=Perl interface for APT (of Debian) methods
+IO::NestedCapture=1.03=Nested capture of the STD* file handles.
+IO::WrapTie=2.110=Tie your handles & retain full OO interface
+Log::Any::Adapter::FileHandle=0.008=Log::Any Adapter for basic filehandles
+Log::Any::Adapter::Mojo=0.06=Log::Any adapter for Mojo::Log
+Log::Any::Adapter::Term=undef=Log::Any adapter for color terminal logging
+Time::Piece::Adaptive=0.03=Time::Piece ext. w/stringify accessors
+WWW::Selenium::NetworkCapture=0.01=Parse net traffic data from Selenium/Firefox

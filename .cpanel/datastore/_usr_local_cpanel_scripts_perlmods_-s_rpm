@@ -1,0 +1,19 @@
+Testing connection speed...(using fast method)...Done
+Ping:2 (ticks) Testing connection speed to cpan.develooper.com using pureperl...(33400.00 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.knowledgematters.net using pureperl...(18933.33 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.schatt.com using pureperl...(21833.33 bytes/s)...Done
+Ping:4 (ticks) Testing connection speed to mirrors.servercentral.net using pureperl...(11220.00 bytes/s)...Done
+Ping:7 (ticks) Testing connection speed to cpan.mirrors.tds.net using pureperl...(9850.00 bytes/s)...Done
+Five usable mirrors located
+Ping:0 (ticks) Testing connection speed to 67.20.126.88 using pureperl...Error (404) while fetching url http://67.20.126.88/pub/CPAN/MIRRORING.FROM
+Warning: removing bad mirror 67.20.126.88 from url list
+test failed...Done
+Mirror Check passed for cpan.develooper.com (/index.html)
+=MODLIST
+RPM=1.51=RPM package management
+RPM::Constants=1.19=Constants for RPM package management
+RPM::Database=1.19=DB interface for RPM package management
+RPM::Header=1.21=Headers for RPM package management
+RPM::Header::PurePerl=1.000002=a perl only implementation of RPM::Header
+RPM::Make::DWIW=0.2=Create RPM from a specification hashref.
+WWW::Search::RpmFind=1.2=Search interface for rpmfind.net

@@ -1,0 +1,48 @@
+---
+abstract: 'a set of version requirements for a CPAN dist'
+author:
+  - 'David Golden <dagolden@cpan.org>'
+  - 'Ricardo Signes <rjbs@cpan.org>'
+build_requires:
+  ExtUtils::MakeMaker: 0
+  File::Spec: 0
+  File::Spec::Functions: 0
+  File::Temp: 0
+  IO::Handle: 0
+  IPC::Open3: 0
+  List::Util: 0
+  Test::More: 0.88
+configure_requires:
+  ExtUtils::MakeMaker: 6.17
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.132660'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: CPAN-Meta-Requirements
+no_index:
+  directory:
+    - t
+    - xt
+    - examples
+    - corpus
+  package:
+    - DB
+provides:
+  CPAN::Meta::Requirements:
+    file: lib/CPAN/Meta/Requirements.pm
+    version: 2.125
+requires:
+  Carp: 0
+  Scalar::Util: 0
+  perl: 5.006
+  strict: 0
+  version: 0.77
+  warnings: 0
+resources:
+  bugtracker: https://github.com/dagolden/CPAN-Meta-Requirements/issues
+  homepage: https://github.com/dagolden/CPAN-Meta-Requirements
+  repository: https://github.com/dagolden/CPAN-Meta-Requirements.git
+version: 2.125
+x_authority: cpan:DAGOLDEN

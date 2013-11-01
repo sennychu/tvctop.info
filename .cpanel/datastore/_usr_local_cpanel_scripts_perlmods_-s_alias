@@ -1,0 +1,20 @@
+Testing connection speed...(using fast method)...Done
+Ping:2 (ticks) Testing connection speed to cpan.develooper.com using pureperl...(cached .. 33400.00 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.schatt.com using pureperl...(cached .. 21766.67 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.knowledgematters.net using pureperl...(cached .. 18933.33 bytes/s)...Done
+Ping:4 (ticks) Testing connection speed to mirrors.servercentral.net using pureperl...(cached .. 11220.00 bytes/s)...Done
+Ping:7 (ticks) Testing connection speed to cpan.mirrors.tds.net using pureperl...(cached .. 8442.86 bytes/s)...Done
+Five usable mirrors located
+Ping:0 (ticks) Testing connection speed to 67.20.126.88 using pureperl...Error (404) while fetching url http://67.20.126.88/pub/CPAN/MIRRORING.FROM
+Warning: removing bad mirror 67.20.126.88 from url list
+test failed...Done
+Mirror Check passed for cpan.develooper.com (/index.html)
+=MODLIST
+Alias=2.32=Convenient access to data/code via aliases
+Data::Alias=1.18=Comprehensive set of aliasing operations
+Exporter::PkgAlias=undef=Load a module into multiple namespaces
+MacOSX::Alias=0.11=Read or create Mac OS X aliases
+Mail::Alias=1.12=Manipulate E-mail aliases and alias files
+Tie::AliasHash=1.01=Hash with key aliases
+Variable::Alias=0.01=Make any variable an alias of another
+fields::aliased=1.05=creates lexical aliases to fields

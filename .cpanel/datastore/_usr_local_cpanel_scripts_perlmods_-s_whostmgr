@@ -1,0 +1,11 @@
+Testing connection speed...(using fast method)...Done
+Ping:2 (ticks) Testing connection speed to cpan.schatt.com using pureperl...(cached .. 32700.00 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.develooper.com using pureperl...(cached .. 22266.67 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.mirrors.hoobly.com using pureperl...(cached .. 20600.00 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.knowledgematters.net using pureperl...(cached .. 18933.33 bytes/s)...Done
+Ping:6 (ticks) Testing connection speed to cpan-sj.viaverio.com using pureperl...(cached .. 10316.67 bytes/s)...Done
+Five usable mirrors located
+Ping:0 (ticks) Testing connection speed to 67.20.126.88 using pureperl...Error (404) while fetching url http://67.20.126.88/pub/CPAN/MIRRORING.FROM
+Warning: removing bad mirror 67.20.126.88 from url list
+test failed...Done
+Mirror Check passed for cpan.schatt.com (/index.html)

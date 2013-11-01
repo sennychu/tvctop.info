@@ -1,0 +1,6 @@
+1.9
+1
+C compiler (/usr/bin/gcc) OK
+1
+Tuned C compiler (/usr/bin/gcc -march=native) OK
+-march=native

@@ -1,0 +1,26 @@
+Testing connection speed...(using fast method)...Done
+Ping:1 (ticks) Testing connection speed to cpan.schatt.com using pureperl...(cached .. 21800.00 bytes/s)...Done
+Ping:3 (ticks) Testing connection speed to cpan.knowledgematters.net using pureperl...(cached .. 18933.33 bytes/s)...Done
+Ping:3 (ticks) Testing connection speed to cpan.develooper.com using pureperl...(cached .. 16725.00 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan-sj.viaverio.com using pureperl...(cached .. 15475.00 bytes/s)...Done
+Ping:3 (ticks) Testing connection speed to cpan.mirrors.hoobly.com using pureperl...(cached .. 996.77 bytes/s)...Done
+Five usable mirrors located
+Ping:0 (ticks) Testing connection speed to 67.20.126.88 using pureperl...Error (404) while fetching url http://67.20.126.88/pub/CPAN/MIRRORING.FROM
+Warning: removing bad mirror 67.20.126.88 from url list
+test failed...Done
+Mirror Check passed for cpan.schatt.com (/index.html)
+=MODLIST
+App::ClusterSSH=undef=Cluster SSH - Cluster Admin Via SSH
+Bundle::SSH=undef=Install modules to use SSH from Perl
+Config::Model::OpenSsh=1.227=OpenSsh configuration files editor and API
+DateTime::BusinessHours=2.02=Calculates Business Hours / Days
+Fuse::PerlSSH::FS=0.13=Mount a remote filesystem via FUSE + PerlSSH
+Net::SSH=0.09=Perl extension for secure shell
+Net::SSH2=0.48=SSH 2 protocol interface
+Net::SSH::Cluster=undef=run a command on a cluster of machines
+Net::SSH::Expect=1.09=An ssh wrapper to execute remote commands
+Net::SSH::LibSSH=undef=Low level interface to OpenSSH
+Net::SSH::Perl=1.35=Perl client Interface to SSH
+Net::SSH::Perl::Timeout=undef=A wrapper of Net::SSH::Perl that has timeout
+Parse::Log::OpenSSH::SFTP=undef=Parse OpenSSH SFTP Logs
+Parse::SSH2::PublicKey=0.01=Parse SSH2 public key files and format them.

@@ -1,0 +1,55 @@
+Testing connection speed...(using fast method)...Done
+Ping:2 (ticks) Testing connection speed to cpan.develooper.com using pureperl...(cached .. 33400.00 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.schatt.com using pureperl...(cached .. 21766.67 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.knowledgematters.net using pureperl...(cached .. 18933.33 bytes/s)...Done
+Ping:4 (ticks) Testing connection speed to mirrors.servercentral.net using pureperl...(cached .. 11220.00 bytes/s)...Done
+Ping:7 (ticks) Testing connection speed to cpan.mirrors.tds.net using pureperl...(cached .. 8442.86 bytes/s)...Done
+Five usable mirrors located
+Ping:0 (ticks) Testing connection speed to 67.20.126.88 using pureperl...Error (404) while fetching url http://67.20.126.88/pub/CPAN/MIRRORING.FROM
+Warning: removing bad mirror 67.20.126.88 from url list
+test failed...Done
+Mirror Check passed for cpan.develooper.com (/index.html)
+=MODLIST
+Apache::Module=0.11=Interface to Apache module struct
+Apache::ModuleConfig=0.01=Interface to configuration API
+Apache::ModuleDoc=1.02=Self documentation for Apache C modules
+Authen::PAM::Module=0.008=Base Class for writing PAM modules in Perl
+Bot::BasicBot::Pluggable::Module::Gitbot=1.00.01=Port of #git's Gitbot
+Bot::BasicBot::Pluggable::Module::PasteBin=0.01=Read Pastebin sites and paste into irc
+Bot::BasicBot::Pluggable::Module::Shutdown=0.03=Disconnects from IRC and shuts down bot.
+Bot::BasicBot::Pluggable::Module::XKCD=0.06=Get xkcd comic links and titles from IRC
+Drupal::Module::Starter=0.06=Save the tedium  of creating Drupal modules
+Env::Modulecmd=1.2=Interface to modulecmd from Perl
+ExtUtils::ModuleMaker=0.51=Better than h2xs for creating modules
+Kernel::Modules::AdminESCL=1.0=OTRS module 4 admin to def MultilevelEsc
+Kernel::Modules::TicketAutoAssignment=1.28=Auto Allocation of a new tkt to avilab Agent
+Module::AutoINC=0.02=Download and install modules upon first use
+Module::Build=0.4007=Build, test, and install Perl modules
+Module::Build::PM_Filter=1.210=Add a PM_Filter feature to Module::Build
+Module::ConfigureRequires=0.03=Back-compat configure_requires alternative
+Module::DynamicSubModule=0.01=Call new modules like calling subroutines!
+Module::Include=undef=Powerful #include templates for Perl code
+Module::Install=1.06=Standalone, extensible Perl module installer
+Module::Install::DBICx::AutoDoc=0.03=Adds Makefile actions for dbicx-autodoc
+Module::Install::Debian=0.030=Adds Makefile action to install .deb package
+Module::Install::ORLite2Pod=1.000=update pod for ORLite projects at build time
+Module::Install::Skip=undef=Module::Install extension
+Module::MakefilePL::Parse=0.12=Partially-parse Makefile.PL
+Module::Metadata::Changes=2.05=Machine-readable Changelog.ini support
+Module::Metadata::CoreList=1.07=Cross-check Build.PL with Module::CoreList
+Module::Optional=0.03=Breaking dependency chains
+Module::Pragma=0.02=Support for implementation of pragmas
+Module::Recursive::Require=0.04=This class require module recursively.
+Module::Release=2.06=Automate software releases
+Module::Release::Git=0.17=Module::Release plug-in to work with Git
+Module::Reload=1.07=Reloads files in %INC based on timestamps
+Module::ScanDeps=1.11=Recursively scan Perl code for dependencies
+Module::Selector=0.10=Selects the first/best module for a job
+Module::Signature=0.73=Module signature file manipulation
+Module::Starter::Plugin::DebPackage=0.000005=Plugin to help create Debian packages
+Module::Test=undef=Autobundling, extensible framework for tests
+Module::Use=0.05=Tracks modules loaded by a script
+Module::Versions=0.02=Handle module versions with flex. interface
+Nginx::Module::Gallery=0.003000=Gallery module for nginx web server
+Test::Module::Used=0.002004=Test dependency between module and META.yml
+Test::UseAllModules=0.14=do use_ok() for all modules MANIFESTed

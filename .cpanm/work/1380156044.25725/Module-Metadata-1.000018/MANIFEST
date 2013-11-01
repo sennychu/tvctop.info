@@ -1,0 +1,26 @@
+Changes
+lib/Module/Metadata.pm
+maint/bump-version
+maint/Makefile.include
+maint/Makefile.PL.include
+Makefile.PL
+MANIFEST			This list of files
+t/contains_pod.t
+t/encoding.t
+t/endpod.t
+t/lib/0_1/Foo.pm
+t/lib/0_2/Foo.pm
+t/lib/BOMTest/UTF16BE.pm
+t/lib/BOMTest/UTF16LE.pm
+t/lib/BOMTest/UTF8.pm
+t/lib/DistGen.pm
+t/lib/ENDPOD.pm
+t/lib/MBTest.pm
+t/lib/Tie/CPHash.pm
+t/metadata.t
+t/taint.t
+t/version.t
+xt/pod.t
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)
+README                                   README file (added by Distar)

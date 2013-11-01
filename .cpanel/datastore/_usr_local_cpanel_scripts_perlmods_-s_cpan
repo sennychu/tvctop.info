@@ -1,0 +1,37 @@
+Testing connection speed...(using fast method)...Done
+Ping:2 (ticks) Testing connection speed to cpan.schatt.com using pureperl...(cached .. 32700.00 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.develooper.com using pureperl...(cached .. 22266.67 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.mirrors.hoobly.com using pureperl...(cached .. 20600.00 bytes/s)...Done
+Ping:2 (ticks) Testing connection speed to cpan.knowledgematters.net using pureperl...(cached .. 18933.33 bytes/s)...Done
+Ping:6 (ticks) Testing connection speed to cpan-sj.viaverio.com using pureperl...(cached .. 10316.67 bytes/s)...Done
+Five usable mirrors located
+Ping:0 (ticks) Testing connection speed to 67.20.126.88 using pureperl...Error (404) while fetching url http://67.20.126.88/pub/CPAN/MIRRORING.FROM
+Warning: removing bad mirror 67.20.126.88 from url list
+test failed...Done
+Mirror Check passed for cpan.schatt.com (/index.html)
+=MODLIST
+App::cpansearch=undef=CPAN module search utility
+CPAN=2.00=Perl Archive browse and download
+CPAN::AutoINC=0.01=Download and install CPAN modules when used
+CPAN::Curate=undef=Support tools for reviewing CPAN modules
+CPAN::Mini::Inject::Remote=0.02=Inject into your CPAN mirror from over here
+CPAN::Mini::Inject::Server=0.03=Inject into your cpan mirror from over there
+CPAN::Reporter=1.2010=Adds CPAN Testers reporting to CPAN.pm
+CPAN::SQLite=0.203=maintain and search a minimal CPAN database
+CPAN::Search::Author=0.02=Interface to search CPAN module author.
+CPAN::Search::Lite::Index=0.77=maintain a searchable CPAN database
+CPAN::Search::Tester=0.02=Interface to search CPAN module tester.
+CPANPLUS=0.9142=Command-line access to the CPAN interface
+CPANPLUS::Dist::Gentoo=0.12=CPANPLUS backend generating Gentoo ebuilds
+CPANPLUS::Dist::Mdv=2.100400=a cpanplus backend to build mandriva rpms
+CPANPLUS::Shell::Wx=0.04=GUI for CPANPLUS using Wx::Perl
+IO::Socket::PortState::cPanel=0.02=xtnd IO::Socket::PortState for cPanel ports
+POE::Component::CPAN::LinksToDocs::No404s=0.001=non-blocking  CPAN::LinksToDocs::No404s
+POE::Component::CPAN::SQLite::Info=0.09=non-blocking wrapper for CPAN::SQLite::Info
+POE::Component::IRC::Plugin::CPAN::Info=0.03=access CPAN module/distro/author information
+POE::Component::IRC::Plugin::CPAN::LinksToDocs::No404s=0.002=get links to CPAN docs from IRC (no 404s)
+Test::CPANpm=0.010=Test CPAN.pm's interaction with your module
+WWW::CPANRatings::RSS=0.0304=Fetch RSS data from cpanratings.perl.org
+cPanel=0.000001=root of our company's public modules
+cPanel::SyncUtil=0.7=cpanelsync directory utility functions
+cPanel::nginx=0.01=cPanel and nginx integration module
