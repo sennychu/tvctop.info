@@ -15,6 +15,14 @@ do
   [[ -e $linuxbrew_bin ]] && export PATH=$linuxbrew_bin:$PATH
 done
 
+for ext_bin in \
+  $HOME/ruby/gems/bin \
+  $HOME/perl/bin \
+  $HOME/perl5/bin
+do
+  [[ -e $ext_bin ]] && export PATH=ext_bin:$PATH
+done
+
 export HOMEBREW_TEMP=/home7/tvctopin/var/tmp
 export HOMEBREW_CACHE=/home7/tvctopin/.linuxbrew/Library/Caches/Homebrew
 # I don't like fun

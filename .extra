@@ -3,9 +3,7 @@ echo "7: .extra...."
 # * ~/.extra can be used for other settings you don’t want to commit
 ## PATH additions
 for another_bin in \
-	$HOME/ruby/gems/bin \
-	$HOME/perl/bin \
-	$HOME/perl5/bin
+
 do
 	[[ -e $another_bin ]] && export PATH=$another_bin:$PATH
 done
