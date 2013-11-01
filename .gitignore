@@ -5,6 +5,7 @@
 !/README.md
 !/SUPPORTERS.md
 !/.*
+/.cpanm
 /etc
 /*.pyc
 /.DS_Store
