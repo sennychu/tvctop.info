@@ -4,7 +4,8 @@
 !/CONTRIBUTING.md
 !/README.md
 !/SUPPORTERS.md
-
+!/.*
+/etc
 /*.pyc
 /.DS_Store
 /Desktop.ini
@@ -17,7 +18,7 @@
 /*bk
 /.coffee_history
 /.cpan
-/..cpanel
+/.cpanel
 /.cpanel-datastore
 /.cpcpan
 /.cpobjcache
@@ -53,3 +54,4 @@
 /var
 /vim
 /apt
+/.vim
