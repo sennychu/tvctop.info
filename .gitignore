@@ -4,7 +4,7 @@
 !/CONTRIBUTING.md
 !/README.md
 !/SUPPORTERS.md
-
+!/.*
 /*.pyc
 /.DS_Store
 /Desktop.ini
