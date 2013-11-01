@@ -5,8 +5,7 @@
 !/README.md
 !/SUPPORTERS.md
 !/.*
-!/etc
-/etc/tvctop.info
+/etc
 /*.pyc
 /.DS_Store
 /Desktop.ini
