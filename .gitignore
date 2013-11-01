@@ -5,7 +5,6 @@
 !/README.md
 !/SUPPORTERS.md
 !/.*
-/etc
 /*.pyc
 /.DS_Store
 /Desktop.ini
@@ -19,13 +18,12 @@
 /.coffee_history
 /.cpan
 /.cpanel
+/.cpanel/*
 /.cpanel-datastore
 /.cpcpan
 /.cpobjcache
 /dev
-/.fontconfig
 /.gem
-/.gitconfig
 /.gnupg
 /.htpasswds
 /.HttpRequest
