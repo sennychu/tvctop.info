@@ -5,6 +5,10 @@
 !/README.md
 !/SUPPORTERS.md
 !/.*
+<<<<<<< HEAD
+=======
+/etc
+>>>>>>> 18780bba6709a69923a49f064f90a400f938d62e
 /*.pyc
 /.DS_Store
 /Desktop.ini
