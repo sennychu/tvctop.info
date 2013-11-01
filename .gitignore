@@ -5,14 +5,12 @@
 !/README.md
 !/SUPPORTERS.md
 
-*.pyc
-.DS_Store
-Desktop.ini
-Thumbs.db
-.Spotlight-V100
-.Trashes
-/Library/LinkedKegs
-/Library/PinnedKegs
+/*.pyc
+/.DS_Store
+/Desktop.ini
+/Thumbs.db
+/.Spotlight-V100
+/.Trashes
 /.bash_history
 /.bash_logout
 /.*bk
@@ -34,6 +32,7 @@ Thumbs.db
 /.lftp
 /Library
 /.linuxbrew
+/.linuxbrew/*
 /linux-dotfiles
 /logs
 /mail
