@@ -6,7 +6,6 @@
 !/SUPPORTERS.md
 !/.*
 !/etc
-.cpanel
 /*.pyc
 /.DS_Store
 /Desktop.ini
