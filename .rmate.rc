@@ -1,2 +1,2 @@
-host: auto  # prefer host from SSH_CONNECTION over localhost
+host: 127.0.0.1  # prefer host from SSH_CONNECTION over localhost
 port: 52698

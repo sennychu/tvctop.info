@@ -1,5 +1,8 @@
 echo "5: .aliases....."
 
+#setup for rmate
+alias rM="/home7/tvctopin/bin/rmate -v -w -H 127.0.0.1 -p 52698 "
+
 alias wG="wget -P /home7/tvctopin/.cache/Homebrew --continue --no-check-certificate "
 alias wH="which -a"
 alias hS="history | grep "

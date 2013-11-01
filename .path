@@ -20,7 +20,7 @@ for ext_bin in \
   $HOME/perl/bin \
   $HOME/perl5/bin
 do
-  [[ -e $ext_bin ]] && export PATH=ext_bin:$PATH
+  [[ -e $ext_bin ]] && export PATH=$ext_bin:$PATH
 done
 
 export HOMEBREW_TEMP=/home7/tvctopin/var/tmp

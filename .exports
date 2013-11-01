@@ -1,6 +1,6 @@
 echo "4: .exports...."
 
-export EDITOR="nano"
+export EDITOR="/home7/tvctopin/bin/rmate -v -w -H localhost"
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=62768
