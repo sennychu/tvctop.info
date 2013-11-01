@@ -1,2 +1,18 @@
 host: 127.0.0.1  # prefer host from SSH_CONNECTION over localhost
 port: 52698
+
+
+##
+#  [-H host-name] [-p port-number] [-w] [-l line-number] [-m display-name] [-t file-type] [-f] [-v] file-path
+#
+# -H  connect to host (default: localhost)
+# -p  port number to use for connection (default: 52698)
+# -w  wait for file to be closed by TextMate
+# -l  place caret on line number after loading file
+# -m  the display name shown in TextMate
+# -t  treat file as having specified type
+# -f  open even if file is not writable
+# -v  verbose logging messages
+# -h  display this usage information
+#
+# environment variables (RMATE_HOST, RMATE_PORT)
