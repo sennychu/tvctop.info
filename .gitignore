@@ -17,9 +17,11 @@
 /*bk
 /.coffee_history
 /.cpan
-/..cpanel
+/.cpan/*
+/.cpanel
+/.cpanel/*
 /.cpanel-datastore
-/.cpcpan
+/.cpcpan/*
 /.cpobjcache
 /dev
 /.fontconfig
@@ -53,3 +55,4 @@
 /var
 /vim
 /apt
+/.vim
