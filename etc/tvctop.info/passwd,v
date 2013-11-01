@@ -1,0 +1,54 @@
+head	1.3;
+access;
+symbols;
+locks
+	tvctopin:1.3; strict;
+comment	@# @;
+
+
+1.3
+date	2013.10.31.12.50.28;	author tvctopin;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2013.10.31.12.47.52;	author tvctopin;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2013.10.31.12.47.52;	author tvctopin;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@sennychu:x:2883:2884::/home7/tvctopin/mail/tvctop.info/sennychu:/bin/bash
+server:x:2883:2884::/home7/tvctopin/mail/tvctop.info/server:/bin/bash
+@
+
+
+1.2
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d2 1
+@
+
+
+1.1
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d1 1
+@
