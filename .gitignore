@@ -4,7 +4,10 @@
 !/CONTRIBUTING.md
 !/README.md
 !/SUPPORTERS.md
+<<<<<<< HEAD
 !/.*
+=======
+>>>>>>> 9979df712d12e45565744e192a071f557dea62ed
 /etc
 /*.pyc
 /.DS_Store
