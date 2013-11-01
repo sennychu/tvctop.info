@@ -1,0 +1,11 @@
+# Disable the startup message
+startup_message off
+
+term xterm-256color
+
+##set a biger buffer
+scrollback 11024
+defscrollback 11024
+
+#use bash as default shell
+shell bash
