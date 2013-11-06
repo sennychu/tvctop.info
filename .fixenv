@@ -1,0 +1,117 @@
+#!/usr/bin/bash
+ 
+umask 077 
+if( { tty -s } ) stty erase "^H" intr "^C" kill "^U" echoe 
+unset autologout 
+if ($?HOSTNAME == 0) setenv HOSTNAME `hostname` 
+set osname=`uname -s` 
+if ($?MACHNAME == 0) then 
+    if ($osname == "AIX") then 
+         setenv MACHNAME rs6000 
+    else 
+         setenv MACHNAME `uname -m` 
+    endif 
+endif 
+if ($?NW_HOME == 0) setenv NW_HOME /ubt/NetMake 
+#if using csh or older tcsh, try to set $HOSTTYPE 
+if (!($?HOSTTYPE)) then 
+        if (-x /bin/arch) then 
+                set hosttype=`/bin/arch` 
+        else if (-x /usr/bin/arch) then 
+                set hosttype=`/usr/bin/arch` 
+        else if (-x /usr/local/bin/arch) then 
+                set hosttype=`/usr/local/bin/arch` 
+        else if (-x /usr/ucb/arch) then 
+                set hosttype=`/usr/ucb/arch` 
+        else set hosttype=unknown 
+        endif 
+        # arch does not exist on HPUX or DEC Alpha, use uname 
+        if ($hosttype == unknown) then 
+                if (-x /bin/uname) then 
+                        set hosttype=`/bin/uname` 
+                endif 
+                if ($hosttype == "HP-UX") then 
+                        set hosttype=hpux 
+                endif 
+        else if ($hosttype == "i386") then 
+                set hosttype=next 
+        endif 
+else 
+        switch ($HOSTTYPE) 
+        case "hp9000*": 
+                set hosttype=hpux 
+                breaksw; 
+        case "sun4" 
+        case "next" 
+                set hosttype=$HOSTTYPE 
+                breaksw; 
+        default 
+                set hosttype=unknown 
+                breaksw; 
+        endsw 
+endif 
+#distingush solaris from sunos (solaris is a pain) 
+if ($hosttype == "sun4") then 
+        if (-x /usr/bin/uname) then 
+                set release=`/usr/bin/uname -r` 
+                if ($release == "5.3") then 
+                        set hosttype=solaris 
+                endif 
+        endif 
+endif 
+# paths that are common to all sites 
+set path=(/bin /usr/bin /usr/ucb /usr/5bin ~/bin ~/bin/$hosttype   
+/usr/local/bin   \ 
+           /usr/etc /etc /usr/bin/X11 /usr/ucb ) 
+switch  ($hosttype) 
+    case "sun4": 
+        alias  fullps    'ps augx' 
+        setenv OPENWINHOME /usr/openwin 
+        setenv ISISARCH SUN4 
+        set    path=($path $OPENWINHOME/bin) 
+        setenv MANPATH ${MANPATH}:${OPENWINHOME}/share/man 
+        breaksw; 
+    case "solaris": 
+        setenv ISISARCH SOLARIS 
+        alias fullps    'ps -ef' 
+        breaksw; 
+    case "decstation": 
+        alias fullps    'ps augx' 
+        breaksw; 
+    default: 
+        alias fullps    'ps' 
+        breaksw; 
+endsw 
+if ($?term == 0) setenv term unknown 
+if ($?SHELL == 0) setenv SHELL /bin/csh 
+if ($?LOGNAME == 0) setenv LOGNAME brianw 
+if ($?USER == 0) setenv USER $LOGNAME 
+if ($?EDITOR == 0) setenv EDITOR emacs 
+if ($?MORE == 0) setenv MORE '-c' 
+if ($?PAGER == 0) setenv PAGER less 
+if ($?PRINTER == 0) setenv PRINTER lw 
+if ($?LANG == 0) setenv LANG english 
+if ($?NNTPSERVER == 0) setenv NNTPSERVER transfer.stratus.com 
+if ($?MANPATH == 0) setenv MANPATH /usr/man:/ids/i_ubt/CVS/sun4/man 
+if ($?VOSNAME == 0) setenv VOSNAME Brian_Williams 
+if ($?ISISHOST == 0) setenv ISISHOST oedipus.sw.stratus.com 
+if ($?ISISPORT == 0) setenv ISISPORT 3021 
+if ($?ISISREMOTE == 0) setenv ISISREMOTE 3022 
+if ($?ISIS_SPOOLER == 0) setenv ISIS_SPOOLER NEW 
+if ($?CVSROOT == 0) setenv CVSROOT /ids/idssrc/Ithaca_cvs 
+if ($?TAPE == 0) then 
+    if ($MACHNAME == oedipus) setenv TAPE /dev/rct/0n 
+    if ($MACHNAME =~ sun*) setenv TAPE /dev/nrst0 
+endif 
+if ($?PROMPT == 0) setenv PROMPT "${HOSTNAME}-${USER} \!% " 
+set prompt="$PROMPT" 
+set history=100 savehist=100 filec notify ignoreeof autocorrect 
+setenv CDPATH .:~:/usr/brianw 
+set cdpath=(. ~ /usr/brianw) 
+setenv MANPATH   
+/usr/local/man:/server/sun4/tools/X11R5/man:/usr/man:/usr/local/isis/man:/ 
+ubt/pure/man 
+setenv MANPATH ${MANPATH}:/u/isis/Isis_dir/man 
+setenv TZ EST5EDT 
+#My aliases are in personal/setup/aliases 
+source personal/setup/.aliases 

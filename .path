@@ -1,7 +1,7 @@
 echo "2: .path....."
 # * ~/.path can be used to extend `$PATH` and $manpath
 # Put $HOME/{sbin,bin} first
-export PATH=/home7/tvctopin/bin:/home7/tvctopin/sbin
+# export PATH=/home7/tvctopin/bin:/home7/tvctopin/sbin
 
 for linuxbrew_bin in \
   /home7/tvctopin/.linuxbrew/bin \
@@ -18,7 +18,9 @@ done
 for ext_bin in \
   $HOME/ruby/gems/bin \
   $HOME/perl/bin \
-  $HOME/perl5/bin
+  $HOME/perl5/bin \
+  $HOME/bin \
+  $HOME/sbin
 do
   [[ -e $ext_bin ]] && export PATH=$ext_bin:$PATH
 done
