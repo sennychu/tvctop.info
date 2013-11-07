@@ -1,11 +1,13 @@
 echo "4: .exports...."
-export EDITOR=nano
+export EDITOR=~/bin/nano
 #export EDITOR="/home7/tvctopin/bin/rmate -v -w -H 127.0.0.1"
 export  GIT_SSL_NO_VERIFY=1
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=62768
 export HISTFILESIZE=$HISTSIZE
 #export HISTCONTROL=ignoredups
+
+export TERM=linux
 
 ## Make some commands not show up in history
 #export HISTIGNORE="ls:cd:cd -:pwd:exit:date:*"
