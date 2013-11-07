@@ -12,7 +12,8 @@ do
 done
 
 for linuxbrew_bin in \
-/home7/tvctopin/.linuxbrew/bin \
+  /home7/tvctopin/.linuxbrew/bin \
+  /home7/tvctopin/.linuxbrew/opt/grep/libexec/gnubin \
   /home7/tvctopin/.linuxbrew/opt/coreutils/libexec/gnubin \
   /home7/tvctopin/.linuxbrew/opt/gnu-time/libexec/gnubin \
   /home7/tvctopin/.linuxbrew/opt/gnu-which/libexec/gnubin \
@@ -20,6 +21,7 @@ for linuxbrew_bin in \
   /home7/tvctopin/.linuxbrew/opt/findutils/libexec/gnubin \
   /home7/tvctopin/.linuxbrew/opt/libtool/libexec/gnubin \
   /home7/tvctopin/.linuxbrew/opt/gnu-sed/libexec/gnubin \
+  /home7/tvctopin/.linuxbrew/libexec \
   /home7/tvctopin/.linuxbrew/opt/gnu-units/libexec/gnubin
 do
   [[ -e $linuxbrew_bin ]] && export PATH=$linuxbrew_bin:$PATH
@@ -64,10 +66,13 @@ export LD_LIBRARY_PATH=/home7/tvctopin/.linuxbrew/lib
 
 
 for linuxbrew_manpath in \
+  /home7/tvctopin/.linuxbrew/opt/grep/libexec/gnuman \
   /home7/tvctopin/.linuxbrew/opt/coreutils/libexec/gnuman \
   /home7/tvctopin/.linuxbrew/opt/binutils/libexec/gnuman \
   /home7/tvctopin/.linuxbrew/opt/findutils/libexec/gnuman \
   /home7/tvctopin/.linuxbrew/opt/libtool/libexec/gnuman \
+  /home7/tvctopin/.linuxbrew/opt/gnu-time/libexec/gnuman \
+  /home7/tvctopin/.linuxbrew/opt/gnu-which/libexec/gnuman \
   /home7/tvctopin/.linuxbrew/opt/gnu-sed/libexec/gnuman \
   /home7/tvctopin/.linuxbrew/opt/gnu-units/libexec/gnuman 
 do
