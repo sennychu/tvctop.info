@@ -1,11 +1,21 @@
 echo "2: .path....."
 # * ~/.path can be used to extend `$PATH` and $manpath
 # Put $HOME/{sbin,bin} first
-# export PATH=/home7/tvctopin/bin:/home7/tvctopin/sbin
+export PATH=/home7/tvctopin/bin:/home7/tvctopin/sbin
+
+for ext_bin in \
+  $HOME/ruby/gems/bin \
+  $HOME/perl/bin \
+  $HOME/perl5/bin
+do
+  [[ -e $ext_bin ]] && export PATH=$ext_bin:$PATH
+done
 
 for linuxbrew_bin in \
-  /home7/tvctopin/.linuxbrew/bin \
+/home7/tvctopin/.linuxbrew/bin \
   /home7/tvctopin/.linuxbrew/opt/coreutils/libexec/gnubin \
+  /home7/tvctopin/.linuxbrew/opt/gnu-time/libexec/gnubin \
+  /home7/tvctopin/.linuxbrew/opt/gnu-which/libexec/gnubin \
   /home7/tvctopin/.linuxbrew/opt/binutils/libexec/gnubin \
   /home7/tvctopin/.linuxbrew/opt/findutils/libexec/gnubin \
   /home7/tvctopin/.linuxbrew/opt/libtool/libexec/gnubin \
@@ -15,16 +25,6 @@ do
   [[ -e $linuxbrew_bin ]] && export PATH=$linuxbrew_bin:$PATH
 done
 
-for ext_bin in \
-  $HOME/ruby/gems/bin \
-  $HOME/perl/bin \
-  $HOME/perl5/bin \
-  $HOME/bin \
-  $HOME/sbin
-do
-  [[ -e $ext_bin ]] && export PATH=$ext_bin:$PATH
-done
-
 export HOMEBREW_TEMP=/home7/tvctopin/var/tmp
 export HOMEBREW_CACHE=/home7/tvctopin/.linuxbrew/Library/Caches/Homebrew
 # I don't like fun
@@ -32,13 +32,12 @@ export HOMEBREW_NO_EMOJI='1'
 # Gimme errors
 export HOMEBREW_DEVELOPER='1'
 
-if [[ -n `which brew` ]]; then
   # Find a Homebrew-built Python
-  python_bin=$(brew --cellar python)/*/bin
+  python_bin=$(brew --cellar python26)/*/bin
   python_bin=`echo $python_bin`
   [[ -e $python_bin ]] && export PATH=$python_bin:$PATH
 
-  [[ -e $(brew --prefix)/share/python ]] && export PATH=$(brew --prefix)/share/python:$PATH
+  [[ -e $(brew --prefix)/share/python26 ]] && export PATH=$(brew --prefix)/share/python26:$PATH
 
   # Find a Homebrew-built Ruby
   ruby_bin=$(brew --prefix ruby)/bin
@@ -52,8 +51,8 @@ if [[ -n `which brew` ]]; then
     $(brew --prefix)/etc/bash_completion.d/git-completion.bash
   do
     [[ -e $comp ]] && source $comp
-done
-fi
+  done
+
 
 #export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
 
@@ -74,5 +73,3 @@ for linuxbrew_manpath in \
 do
   [[ -e $linuxbrew_manpath ]] && export MANPATH=$linuxbrew_manpath:$MANPATH
 done
-
-
