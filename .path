@@ -6,6 +6,7 @@ export PATH=/home7/tvctopin/bin:/home7/tvctopin/sbin
 for ext_bin in \
   $HOME/ruby/gems/bin \
   $HOME/perl/bin \
+	$HOME/ruby/bin \
   $HOME/perl5/bin
 do
   [[ -e $ext_bin ]] && export PATH=$ext_bin:$PATH

@@ -18,7 +18,7 @@ alias bU="brew update -v && brew upgrade -v"
 alias bL="brew list"
 alias hE="./configure --help"
 alias rM="rm -rf "
-alias sH="ssh -o ServerAliveInterval=200 tvctopin@tvctop.info"
+
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
