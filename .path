@@ -4,10 +4,9 @@ echo "2: .path....."
 export PATH=/home7/tvctopin/bin:/home7/tvctopin/sbin:$PATH
 
 for ext_bin in \
-  $HOME/ruby/gems/bin \
-  $HOME/perl/bin \
-	$HOME/ruby/bin \
-  $HOME/perl5/bin
+/home7/tvctopin/ruby/gems/bin \
+/home7/tvctopin/perl/bin \$HOME/ruby/bin \
+/home7/tvctopin/perl5/bin
 do
   [[ -e $ext_bin ]] && export PATH=$ext_bin:$PATH
 done
