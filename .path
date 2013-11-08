@@ -1,7 +1,7 @@
 echo "2: .path....."
 # * ~/.path can be used to extend `$PATH` and $manpath
 # Put $HOME/{sbin,bin} first
-export PATH=/home7/tvctopin/bin:/home7/tvctopin/sbin
+export PATH=/home7/tvctopin/bin:/home7/tvctopin/sbin:$PATH
 
 for ext_bin in \
   $HOME/ruby/gems/bin \
