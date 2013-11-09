@@ -15,6 +15,7 @@ done
 
 for linuxbrew_bin in \
   /home7/tvctopin/.linuxbrew/bin \
+  /home7/tvctopin/.linuxbrew/sbin \
   /home7/tvctopin/.linuxbrew/opt/grep/libexec/gnubin \
   /home7/tvctopin/.linuxbrew/opt/coreutils/libexec/gnubin \
   /home7/tvctopin/.linuxbrew/opt/gnu-time/libexec/gnubin \
