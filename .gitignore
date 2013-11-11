@@ -5,6 +5,7 @@
 !/README.md
 !/SUPPORTERS.md
 !/.*
+/.rvm/
 /.cpanm
 /etc
 /*.pyc
