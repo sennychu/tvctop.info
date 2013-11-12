@@ -48,6 +48,7 @@
 /.npm
 /public_ftp
 /public_html
+/public_html/*
 /ruby
 /sbin
 /bin
