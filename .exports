@@ -1,5 +1,12 @@
 echo "4: .exports...."
-export EDITOR=nano
+
+
+if [[ -f $(which rmate) ]]; then
+	export EDITOR="rmate -v -w "
+else
+  export EDITOR=nano
+fi
+
 #export EDITOR="/home7/tvctopin/bin/rmate -v -w -H 127.0.0.1"
 export  GIT_SSL_NO_VERIFY=1
 # Larger bash history (allow 32³ entries; default is 500)
