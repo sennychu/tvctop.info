@@ -5,6 +5,7 @@
 !/README.md
 !/SUPPORTERS.md
 !/.*
+/.cpanel-logs
 /.rvm/
 /.cpanm
 /etc
