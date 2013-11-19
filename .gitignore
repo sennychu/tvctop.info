@@ -9,6 +9,12 @@
 /.rvm/
 /.cpanm
 /etc
+/.cache
+/.htmltemplates/
+/.webconfig/
+/*.*_bk
+/*_bk
+/*~
 /*.pyc
 /.subversion/
 /.Trash/
