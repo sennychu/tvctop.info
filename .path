@@ -1,80 +1,23 @@
-echo "2: .path....."
-# * ~/.path can be used to extend `$PATH` and $manpath
-# Put $HOME/{sbin,bin} first
-export PATH=/home7/tvctopin/bin:/home7/tvctopin/sbin:$PATH
+echo "loading .path......"
 
-for ext_bin in \
-/home7/tvctopin/ruby/gems/bin \
-/home7/tvctopin/perl/bin
+# setup PATH
+for my_ext in \
+$HOME/ruby/gems/bin \
+$HOME/perl5/bin \
+$HOME/.linuxbrew/{sbin,bin}
 do
-  [[ -e $ext_bin ]] && export PATH=$ext_bin:$PATH
+  [[ -e $my_ext ]] && export PATH=$my_ext:$PATH
 done
+unset my_ext
 
-for linuxbrew_bin in \
-  /home7/tvctopin/.linuxbrew/bin \
-  /home7/tvctopin/.linuxbrew/sbin \
-  /home7/tvctopin/.linuxbrew/opt/grep/libexec/gnubin \
-  /home7/tvctopin/.linuxbrew/opt/coreutils/libexec/gnubin \
-  /home7/tvctopin/.linuxbrew/opt/gnu-time/libexec/gnubin \
-  /home7/tvctopin/.linuxbrew/opt/gnu-which/libexec/gnubin \
-  /home7/tvctopin/.linuxbrew/opt/binutils/libexec/gnubin \
-  /home7/tvctopin/.linuxbrew/opt/findutils/libexec/gnubin \
-  /home7/tvctopin/.linuxbrew/opt/libtool/libexec/gnubin \
-  /home7/tvctopin/.linuxbrew/opt/gnu-sed/libexec/gnubin \
-  /home7/tvctopin/.linuxbrew/libexec \
-  /home7/tvctopin/.linuxbrew/opt/gnu-units/libexec/gnubin
-do
-  [[ -e $linuxbrew_bin ]] && export PATH=$linuxbrew_bin:$PATH
-done
+# Add Homebrew completions and homebrew sourced completions
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+# option do
+if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
+    . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+fi
 
-export HOMEBREW_TEMP=/home7/tvctopin/var/tmp
-export HOMEBREW_CACHE=/home7/tvctopin/.linuxbrew/Library/Caches/Homebrew
-# I don't like fun
-export HOMEBREW_NO_EMOJI='1'
-# Gimme errors
-export HOMEBREW_DEVELOPER='1'
-
-  # Find a Homebrew-built Python
-  python_bin=$(brew --cellar python26)/*/bin
-  python_bin=`echo $python_bin`
-  [[ -e $python_bin ]] && export PATH=$python_bin:$PATH
-
-  [[ -e $(brew --prefix)/share/python26 ]] && export PATH=$(brew --prefix)/share/python26:$PATH
-
-  # Find a Homebrew-built Ruby
-  ruby_bin=$(brew --prefix ruby)/bin
-  ruby_bin=`echo $ruby_bin`
-  [[ -e $ruby_bin ]] && export PATH=$ruby_bin:$PATH
-
-  # Add Homebrew completions and homebrew sourced completions
-  source $(brew --repo)/Library/Contributions/brew_bash_completion.sh
-  for comp in \
-    $(brew --prefix)/etc/bash_completion \
-    $(brew --prefix)/etc/bash_completion.d/git-completion.bash
-  do
-    [[ -e $comp ]] && source $comp
-  done
-
-
-#export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
-
-# No ._ files in archives please
-#export COPYFILE_DISABLE=true
-
-
-export LD_LIBRARY_PATH=/home7/tvctopin/.linuxbrew/lib
-
-
-for linuxbrew_manpath in \
-  /home7/tvctopin/.linuxbrew/opt/grep/libexec/gnuman \
-  /home7/tvctopin/.linuxbrew/opt/coreutils/libexec/gnuman \
-  /home7/tvctopin/.linuxbrew/opt/binutils/libexec/gnuman \
-  /home7/tvctopin/.linuxbrew/opt/findutils/libexec/gnuman \
-  /home7/tvctopin/.linuxbrew/opt/libtool/libexec/gnuman \
-  /home7/tvctopin/.linuxbrew/opt/gnu-time/libexec/gnuman \
-  /home7/tvctopin/.linuxbrew/opt/gnu-which/libexec/gnuman \
-  /home7/tvctopin/.linuxbrew/opt/gnu-sed/libexec/gnuman \
-  /home7/tvctopin/.linuxbrew/opt/gnu-units/libexec/gnuman 
-do
-  [[ -e $linuxbrew_manpath ]] && export MANPATH=$linuxbrew_manpath:$MANPATH
-done
+# setup MANPATH
+export MANPATH=$(brew --prefix)/share/man:$MANPATH

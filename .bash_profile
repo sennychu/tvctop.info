@@ -1,19 +1,22 @@
-echo # newline
-echo "========================================"
-echo "the lastlogin from: $(cat ~/.lastlogin)"
-echo "========================================"
-echo # newline
-echo "1: .bash_profile...."
+# echo "loading .bash_profile...."
 
-# Load the shell dotfiles, and then some:
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
-	[ -r "$file" ] && source "$file"
-done
-unset file
+PATH=$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$HOME/{sbin,bin}:$PATH
+export PATH
+
+# Load the shell dotfiles
+#if [ -r ~/.path ]; then . ~/.path; fi
+if [ -r ~/.bash_prompt ]; then . ~/.bash_prompt; fi
+#if [ -r ~/.exports ]; then . ~/.exports; fi
+#if [ -r ~/.aliases ]; then . ~/.aliases; fi
+#if [ -r ~/.functions ]; then . ~/.functions; fi
+#if [ -r ~/.extra ]; then . ~/.extra; fi
+
+if [ -r ~/.profile ]; then . ~/.profile; fi
+case "$-" in *i*) if [ -r ~/.bashrc ]; then . ~/.bashrc; fi;; esac
 
 
 
-  
+
 ## Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
@@ -23,7 +26,4 @@ shopt -s histappend
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-
-source ~/.profile
+ulimit -s unlimited

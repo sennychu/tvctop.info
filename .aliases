@@ -1,9 +1,8 @@
-echo "5: .aliases....."
+echo "loading .aliases....."
 
 #setup for rmate
-alias rM="/home7/tvctopin/bin/rmate -v -w -H 127.0.0.1 -p 52698 "
+alias mAte="rmate -v -w "
 
-alias wG="wget -P /home7/tvctopin/.cache/Homebrew --continue --no-check-certificate "
 alias wH="which -a"
 alias hS="history | grep "
 alias lS="ls -al"
@@ -11,14 +10,14 @@ alias fD="find ~/ -name "
 alias pS="ps ax | grep "
 alias bF="brew info"
 alias bS="brew search"
-alias bI="brew install -v"
+alias bI="brew install "
 alias bC="brew cleanup && brew prune"
 alias bE="brew edit "
 alias bU="brew update -v && brew upgrade -v"
 alias bL="brew list"
 alias hE="./configure --help"
 alias rM="rm -rf "
-alias sH="ssh -o ServerAliveInterval=200 tvctopin@tvctop.info"
+alias sSh="ssh -o ServerAliveInterval=200 tvctopin@tvctop.info"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -57,16 +56,16 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 alias gurl='curl --compressed'
 
 ## IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
-alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+alias iP="dig +short myip.opendns.com @resolver1.opendns.com"
+alias lIp="ipconfig getifaddr en1"
+alias iPs="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 
 # Enhanced WHOIS lookups
-alias whois="whois -h whois-servers.net"
+alias wHois="whois -h whois-servers.net"
 
 # View HTTP traffic
-alias sniff="ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias sNiff="ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias hTtpdump="tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 ## Canonical hex dump; some systems have this symlinked
 command -v hd > /dev/null || alias hd="hexdump -C"
@@ -78,10 +77,6 @@ alias c="tr -d '\n' | pbcopy"
 # ROT13-encode text. Works for decoding, too! ;)
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 
-
-# Ring the terminal bell, and put a badge on Terminal.appâs Dock icon
-# (useful when executing time-consuming commands)
-alias badge="tput bel"
 
 # Intuitive map function
 # For example, to list all directories that contain a certain file:

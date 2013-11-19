@@ -1,1 +1,2 @@
-echo "loading .profile"
+echo "loading .profile......"
+

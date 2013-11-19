@@ -1,21 +1,16 @@
-echo "4: .exports...."
+echo "loading .exports...."
 
+export EDITOR="nano"
 
-if [[ -f $(which rmate) ]]; then
-	export EDITOR="rmate -v -w "
-else
-  export EDITOR=nano
-fi
+export LD_LIBRARY_PATH=/home7/tvctopin/.linuxbrew/lib
+export HOMEBREW_TEMP=/home7/tvctopin/var/tmp
+export HOMEBREW_CACHE=/home7/tvctopin/.linuxbrew/Library/Caches/Homebrew
+export HOMEBREW_NO_EMOJI='1'
+export HOMEBREW_DEVELOPER='1'
 
-#export EDITOR="/home7/tvctopin/bin/rmate -v -w -H 127.0.0.1"
-export  GIT_SSL_NO_VERIFY=1
-# Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=62768
 export HISTFILESIZE=$HISTSIZE
-#export HISTCONTROL=ignoredups
-
 export TERM=linux
-
 ## Make some commands not show up in history
 #export HISTIGNORE="ls:cd:cd -:pwd:exit:date:*"
 
@@ -38,7 +33,9 @@ export GREP_OPTIONS="--color=auto"
 export GIT_AUTHOR_NAME="sennychu"
 export GIT_COMMITTER_NAME="sennychu"
 git config --global user.name "sennychu"
+
 export GIT_AUTHOR_EMAIL="senny.share@gmail.com"
 export GIT_COMMITTER_EMAIL="senny.share@gmail.com"
 git config --global user.email "senny.share@gmail.com"
-#export GIT_SSL_NO_VERIFY=1
+
+export GIT_SSL_NO_VERIFY=1
