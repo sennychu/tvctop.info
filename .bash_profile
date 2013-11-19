@@ -1,29 +1,24 @@
-# echo "loading .bash_profile...."
+echo "loading .bash_profile...."
 
-PATH=$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$HOME/{sbin,bin}:$PATH
+PATH=$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$HOME/bin:$HOME/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/root/bin:/root/sbin
 export PATH
+#export LD_LIBRARY_PATH=/home7/tvctopin/.linuxbrew/lib
+#export HOMEBREW_TEMP=/home7/tvctopin/var/tmp
+#export HOMEBREW_CACHE=/home7/tvctopin/.linuxbrew/Library/Caches/Homebrew
+#export HOMEBREW_NO_EMOJI='1'
+#export HOMEBREW_DEVELOPER='1'
 
 # Load the shell dotfiles
-#if [ -r ~/.path ]; then . ~/.path; fi
-if [ -r ~/.bash_prompt ]; then . ~/.bash_prompt; fi
-#if [ -r ~/.exports ]; then . ~/.exports; fi
-#if [ -r ~/.aliases ]; then . ~/.aliases; fi
-#if [ -r ~/.functions ]; then . ~/.functions; fi
-#if [ -r ~/.extra ]; then . ~/.extra; fi
+. ~/.path
+. ~/.bash_prompt
+. ~/.exports
+. ~/.aliases
+. ~/.functions
+. ~/.extra
 
 if [ -r ~/.profile ]; then . ~/.profile; fi
 case "$-" in *i*) if [ -r ~/.bashrc ]; then . ~/.bashrc; fi;; esac
 
-
-
-
-## Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
-
-# Append to the Bash history file, rather than overwriting it
 shopt -s histappend
-
-# Autocorrect typos in path names when using `cd`
 shopt -s cdspell
-
-ulimit -s unlimited
