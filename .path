@@ -3,6 +3,7 @@ echo "loading .path......"
 # setup PATH
 for my_ext in \
 $HOME/ruby/gems/bin \
+/home7/tvctopin/.gem/ruby/1.9.3/bin \
 $HOME/perl5/bin \
 $HOME/.linuxbrew/{sbin,bin}
 do
