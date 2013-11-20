@@ -1,0 +1,14 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    apache-config-generator (0.2.7)
+      rainbow
+    rainbow (1.1.4)
+    rake (10.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  apache-config-generator (>= 0.2.7)
+  rake
