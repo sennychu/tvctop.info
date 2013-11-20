@@ -1,12 +1,11 @@
 echo "loading .bash_profile...."
 
-PATH=$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$HOME/bin:$HOME/sbin:/usr/bin:/usr/sbin:/bin:/sbin
-export PATH
-#export LD_LIBRARY_PATH=/home7/tvctopin/.linuxbrew/lib
-#export HOMEBREW_TEMP=/home7/tvctopin/var/tmp
-#export HOMEBREW_CACHE=/home7/tvctopin/.linuxbrew/Library/Caches/Homebrew
-export HOMEBREW_NO_EMOJI='1'
-export HOMEBREW_DEVELOPER='1'
+PS1="\u@\h \W"
+set -vx
+# file protection
+umask 002 # all to me, read to group and others
+
+
 
 # Load the shell dotfiles
 . ~/.path
@@ -18,6 +17,11 @@ export HOMEBREW_DEVELOPER='1'
 
 if [ -r ~/.profile ]; then . ~/.profile; fi
 case "$-" in *i*) if [ -r ~/.bashrc ]; then . ~/.bashrc; fi;; esac
+
+# Keyboard, bell, display style: the readline config file:
+if [ −z "$INPUTRC" −a ! −f "$HOME/.inputrc" ]; then
+INPUTRC=/etc/inputrc
+fi
 
 shopt -s nocaseglob
 shopt -s histappend
