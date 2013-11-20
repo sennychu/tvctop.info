@@ -5,6 +5,9 @@
 !/README.md
 !/SUPPORTERS.md
 !/.*
+!/.etc/
+!/.gemrc
+!/.modrc
 /.cpanel-logs
 /.rvm/
 /.cpanm
