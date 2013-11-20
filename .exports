@@ -4,7 +4,7 @@ export EDITOR=$(which nano)
 
 export HISTSIZE=62768
 export HISTFILESIZE=$HISTSIZE
-#export TERM=linux
+export TERM=linux
 ## Make some commands not show up in history
 #export HISTIGNORE="ls:cd:cd -:pwd:exit:date:*"
 
@@ -26,10 +26,10 @@ export GREP_OPTIONS="--color=auto"
 # my Git credentials
 export GIT_AUTHOR_NAME="sennychu"
 export GIT_COMMITTER_NAME="sennychu"
-#git config --global user.name "sennychu"
+git config --global user.name "sennychu"
 
 export GIT_AUTHOR_EMAIL="senny.share@gmail.com"
 export GIT_COMMITTER_EMAIL="senny.share@gmail.com"
-#git config --global user.email "senny.share@gmail.com"
+git config --global user.email "senny.share@gmail.com"
 
-#export GIT_SSL_NO_VERIFY=1
+export GIT_SSL_NO_VERIFY=1
