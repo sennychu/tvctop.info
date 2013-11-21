@@ -1,3 +1,0 @@
-source:       "source"
-destination:  "conf.d"
-rotate_logs_path: '/path/to/apache/bin/rotatelogs'

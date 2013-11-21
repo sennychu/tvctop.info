@@ -7,9 +7,9 @@ $HOME/ruby/gems/bin \
 $HOME/perl5/bin \
 $HOME/{bin,sbin}
 do
-  [[ -e $my_ext ]] && export PATH=$PATH:$my_ext
+  [[ -e $my_ext ]] && export PATH=$my_ext:$PATH
 done
 unset my_ext
 
 # setup MANPATH
-export MANPATH=$(brew --prefix)/share/man:$MANPATH
+export MANPATH=$HOME/opt/share/man:$(brew --prefix)/share/man:$MANPATH

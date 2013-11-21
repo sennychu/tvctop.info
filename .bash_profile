@@ -4,9 +4,9 @@ echo "loading .bash_profile...."
 # file protection
 umask 022 # all to me, read to group and others
 
-PATH=/home7/tvctopin/.linuxbrew/bin
+PATH=$HOME/opt/bin:$HOMEoptsbin:/home7/tvctopin/.linuxbrew/bin:$PATH
 export PATH
-export LD_LIBRARY_PATH=/home7/tvctopin/lib
+export LD_LIBRARY_PATH=$HOME/opt/lib:/home7/tvctopin/.linuxbrew/lib
 export HOMEBREW_NO_EMOJI='1'
 export HOMEBREW_DEVELOPER='1'
 
