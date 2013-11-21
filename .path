@@ -4,9 +4,10 @@ echo "loading .path......"
 for my_ext in \
 $HOME/ruby/gems/bin \
 /home7/tvctopin/.gem/ruby/1.9.3/bin \
-$HOME/perl5/bin
+$HOME/perl5/bin \
+$HOME/{bin,sbin}
 do
-  [[ -e $my_ext ]] && export PATH=$my_ext:$PATH
+  [[ -e $my_ext ]] && export PATH=$PATH:$my_ext
 done
 unset my_ext
 
