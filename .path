@@ -4,22 +4,11 @@ echo "loading .path......"
 for my_ext in \
 $HOME/ruby/gems/bin \
 /home7/tvctopin/.gem/ruby/1.9.3/bin \
-$HOME/perl5/bin \
-$HOME/{sbin,bin} \
-$HOME/.linuxbrew/{sbin,bin}
+$HOME/perl5/bin
 do
   [[ -e $my_ext ]] && export PATH=$my_ext:$PATH
 done
 unset my_ext
-
-# Add Homebrew completions and homebrew sourced completions
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
-# option do
-if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
-    . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
-fi
 
 # setup MANPATH
 export MANPATH=$(brew --prefix)/share/man:$MANPATH
