@@ -9,7 +9,7 @@ export PATH
 export LD_LIBRARY_PATH=$HOME/opt/lib:/home7/tvctopin/.linuxbrew/lib
 export HOMEBREW_NO_EMOJI='1'
 export HOMEBREW_DEVELOPER='1'
-
+export PKG_CONFIG_PATH=/home7/tvctopin/opt/lib/pkgconfig:/home7/tvctopin/.linuxbrew/lib/pkgconfig
 export HOMEBREW_TEMP=/home7/tvctopin/var/tmp
 export HOMEBREW_CACHE=/home7/tvctopin/.linuxbrew/Library/Caches/Homebrew
 

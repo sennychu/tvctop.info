@@ -13,51 +13,6 @@ function kill-empty-folders {
     find . -depth -type d -empty -exec rmdir "{}" \;
 }
 
-# download book from zanghaihua.org
-function DDL() {
-	# get input number for the start~end page
-	if [[ -n $StartPoint_PageNumber ]] && [[ -n $EndPoint_PageNumber ]]; then
-		echo $StartPoint_PageNumber;
-		echo $EndPoint_PageNumber;
-	else 
-		read -p "Start: $@"  StartPoint_PageNumber
-		read -p "End: $@"  EndPoint_PageNumber
-	fi
-
-	# setup the home page address for download site
-	SITE="http://www.zanghaihua.org/"
-	echo "## Starting Download BookPage From $SITE"
-  
-	# get BOOKCONECT from target page
-	for (( i=$StartPoint_PageNumber;i<=$EndPoint_PageNumber;i++ ))
-	{
-		# add Progressively increase for page number
-		TARGET_PAGE=$i;
-		TARGET_ADDRESS=$SITE$i".html";
-		SOURCE_PAGE=/home7/tvctopin/public_html/tmp.html;
-		curl -S -# $TARGET_ADDRESS > $SOURCE_PAGE;
-		TARGET_TITLE=$(cat $SOURCE_PAGE | grep  "<title>" | sed -e 's/[<>a-z/]//g');
-		TARGET_CONECT=$(cat $SOURCE_PAGE | grep  "BookText" | sed -e 's/[{<div class="bookcontent clearfix" id="BookText">}-<>0-9()a-z&A-Z/;]//g');
-		TARGET_OUTPUT=/home7/tvctopin/public_html/book.html;
-    
-		# output the booktext to file
-		echo >> $TARGET_OUTPUT;
-		echo "$TARGET_TITLE" >> $TARGET_OUTPUT;
-		echo >> $TARGET_OUTPUT;
-		echo "From:"$TARGET_ADDRESS >> $TARGET_OUTPUT;
-		echo $TARGET_CONECT >> $TARGET_OUTPUT;
-		echo "___________________________________________________" >> $TARGET_OUTPUT;
-		echo >> $TARGET_OUTPUT;
-		echo >> $TARGET_OUTPUT;
-	}
-	rm -rf  $SOURCE_PAGE
-	FinalBook=/home7/tvctopin/public_html/dbook.html
-	rm -rf $FinalBook
-	mv $TARGET_OUTPUT $FinalBook
-	echo "## Done!! Getting Book From $StartPoint_PageNumber To $EndPoint_PageNumber, Save To $FinalBook "
-	unset StartPoint_PageNumber
-	unset EndPoint_PageNumber
-}
 
 function setWindowTitle {
   case $TERM in
@@ -106,28 +61,6 @@ function bman {
   man "${1}" | man2html | browser
 }
 
-function pgrep {
-  local exclude="\.svn|\.git|\.swp|\.coverage|\.pyc|_build"
-  find . -maxdepth 1 -mindepth 1 | egrep -v "$exclude" | xargs egrep -lir "$1" | egrep -v "$exclude" | xargs egrep -Hin --color "$1"
-}
-
-# auto source LDLIBPATH
-## not done
-function llDP() {
-	MYPATHS=$(cat /home7/tvctopin/.ldrc | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/:/g') 
-	ALLPATH=\"${MYPATHS}\"; 
-	export MYPATH=$ALLPATH
-}
-
-
-# my bash update command
-## not done
-function uB() {
-	alias updateBash="source ~/dotfiles/bootstrap.sh -f; 
-	cd ~/dotfiles; git add -A; 
-	git commit -m 'update by sennychu, at: $(date '+%S:%M:%H %/ %d-%m-%Y')'; 
-	git push origin master;"
-}
 
 # my linux server shell-env upload to Github Repo
 ## not done
@@ -147,23 +80,26 @@ function bR() {
 }
 
 # extract the xz filepackeg,and go to the extract path
+function uGz() {
+	filename="$@"
+	realname="$(echo $filename | sed  -e "s/.tar.gz//")"
+	tar xfvz $filename 
+	cd "./$realname" && echo "Unpack Done!!"
+}
+# extract the xz filepackeg,and go to the extract path
 function uXz() {
-	extractdir=/home7/tvctopin/var/tmp
 	filename="$@"
 	realname="$(echo $filename | sed  -e "s/.tar.xz//")"
 	xz -dc $filename  | tar -xpf -
-	mv ./$realname $extractdir
-	cd "$extractdir/$realname" && echo "Done!!"
+	cd "./$realname" && echo "Unpack Done!!"
 }
 
 # extract the bz2 filepackeg,and go to the extract path
 function uBz() {
-	extractdir=/home7/tvctopin/var/tmp
 	filename="$@"
 	realname="$(echo $filename | sed  -e "s/.tar.bz2//")"
 	bzcat $filename | tar -xf -    
-	mv ./$realname $extractdir
-	cd "$extractdir/$realname" && echo "Done!!"
+	cd "./$realname" && echo "Unpack Done!!"
 }
 
 # download and extract the brew pkg,just work for homebrew's pkg
