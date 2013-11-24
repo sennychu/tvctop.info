@@ -1,29 +1,5 @@
 echo "loading .functions......"
 
-function pgrep {
-  local exclude="\.svn|\.git|\.swp|\.coverage|\.pyc|_build"
-  find . -maxdepth 1 -mindepth 1 | egrep -v "$exclude" | xargs egrep -lir "$1" | egrep -v "$exclude" | xargs egrep -Hin --color "$1"
-}
-
-function show-empty-folders {
-    find . -depth -type d -empty
-}
-
-function kill-empty-folders {
-    find . -depth -type d -empty -exec rmdir "{}" \;
-}
-
-
-function git-root {
-  root=$(git rev-parse --git-dir 2> /dev/null)
-  [[ -z "$root" ]] && root="."
-  dirname $root
-}
-
-
-
-
-
 
 # homebrew function shotcut, unlink then remove the pkg
 function bR() {

@@ -1,40 +1,36 @@
 echo "loading .bash_prompt......"
 
-# @gf3’s Sexy Bash Prompt, inspired by “Extravagant Zsh Prompt”
-# Shamelessly copied from https://github.com/gf3/dotfiles
-# Screenshot: http://i.imgur.com/s0Blh.png
-
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
-	export TERM=gnome-256color
+  export TERM=gnome-256color
 elif infocmp xterm-256color >/dev/null 2>&1; then
-	export TERM=xterm-256color
+  export TERM=xterm-256color
 fi
 
 if tput setaf 1 &> /dev/null; then
-	tput sgr0
-	if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
-		MAGENTA=$(tput setaf 9)
-		ORANGE=$(tput setaf 172)
-		GREEN=$(tput setaf 190)
-		PURPLE=$(tput setaf 141)
-		WHITE=$(tput setaf 0)
-	else
-		MAGENTA=$(tput setaf 5)
-		ORANGE=$(tput setaf 4)
-		GREEN=$(tput setaf 2)
-		PURPLE=$(tput setaf 1)
-		WHITE=$(tput setaf 7)
-	fi
-	BOLD=$(tput bold)
-	RESET=$(tput sgr0)
+tput sgr0
+if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
+MAGENTA=$(tput setaf 9)
+ORANGE=$(tput setaf 172)
+GREEN=$(tput setaf 190)
+PURPLE=$(tput setaf 141)
+WHITE=$(tput setaf 0)
 else
-	MAGENTA="\033[1;31m"
-	ORANGE="\033[1;33m"
-	GREEN="\033[1;32m"
-	PURPLE="\033[1;35m"
-	WHITE="\033[1;37m"
-	BOLD=""
-	RESET="\033[m"
+MAGENTA=$(tput setaf 5)
+ORANGE=$(tput setaf 4)
+GREEN=$(tput setaf 2)
+PURPLE=$(tput setaf 1)
+WHITE=$(tput setaf 7)
+fi
+BOLD=$(tput bold)
+RESET=$(tput sgr0)
+else
+MAGENTA="\033[1;31m"
+ORANGE="\033[1;33m"
+GREEN="\033[1;32m"
+PURPLE="\033[1;35m"
+WHITE="\033[1;37m"
+BOLD=""
+RESET="\033[m"
 fi
 
 export MAGENTA
@@ -65,90 +61,3 @@ FF_ARROW="→"
 RECYCLE="♺"
 MIDDOT="•"
 PLUSMINUS="±"
-
-
-function parse_git_branch {
-  branch_pattern="^# On branch ([^${IFS}]*)"
-  remote_pattern_ahead="# Your branch is ahead of"
-  remote_pattern_behind="# Your branch is behind"
-  remote_pattern_ff="# Your branch (.*) can be fast-forwarded."
-  diverge_pattern="# Your branch and (.*) have diverged"
-
-  git_status="$(git status 2> /dev/null)"
-  if [[ ! ${git_status} =~ ${branch_pattern} ]]; then
-    # Rebasing?
-    toplevel=$(git rev-parse --show-toplevel 2> /dev/null)
-    [[ -z "$toplevel" ]] && return
-
-    [[ -d "$toplevel/.git/rebase-merge" || -d "$toplevel/.git/rebase-apply" ]] && {
-      sha_file="$toplevel/.git/rebase-merge/stopped-sha"
-      [[ -e "$sha_file" ]] && {
-        sha=`cat "${sha_file}"`
-      }
-      echo "${PINK}(rebase in progress)${COLOR_NONE} ${sha}"
-    }
-    return
-  fi
-
-  branch=${BASH_REMATCH[1]}
-
-  # Dirty?
-  if [[ ! ${git_status} =~ "working directory clean" ]]; then
-    [[ ${git_status} =~ "modified:" ]] && {
-      git_is_dirty="${RED}${LIGHTNING_BOLT}"
-    }
-
-    [[ ${git_status} =~ "Untracked files" ]] && {
-      git_is_dirty="${git_is_dirty}${WHITE}${MIDDOT}"
-    }
-
-    [[ ${git_status} =~ "new file:" ]] && {
-      git_is_dirty="${git_is_dirty}${LT_GREEN}+"
-    }
-
-    [[ ${git_status} =~ "deleted:" ]] && {
-      git_is_dirty="${git_is_dirty}${RED}-"
-    }
-
-    [[ ${git_status} =~ "renamed:" ]] && {
-      git_is_dirty="${git_is_dirty}${YELLOW}→"
-    }
-  fi
-
-  # Are we ahead of, beind, or diverged from the remote?
-  if [[ ${git_status} =~ ${remote_pattern_ahead} ]]; then
-    remote="${YELLOW}${UP_ARROW}"
-  elif [[ ${git_status} =~ ${remote_pattern_ff} ]]; then
-    remote_ff="${WHITE}${FF_ARROW}"
-  elif [[ ${git_status} =~ ${remote_pattern_behind} ]]; then
-    remote="${YELLOW}${DOWN_ARROW}"
-  elif [[ ${git_status} =~ ${diverge_pattern} ]]; then
-    remote="${YELLOW}${UD_ARROW}"
-  fi
-
-  echo "${remote}${remote_ff}${GREEN}(${branch})${COLOR_NONE}${git_is_dirty}${COLOR_NONE}"
-}
-
-
-
-
-function setWindowTitle {
-  case $TERM in
-    *xterm*|ansi)
-      echo -n -e "\033]0;$*\007"
-      ;;
-  esac
-}
-
-
-
-
-function set_prompt {
-  [[ -n $HOMEBREW_DEBUG_INSTALL ]] && \
-    homebrew_prompt="${BROWN}Homebrew:${COLOR_NONE} debugging ${HOMEBREW_DEBUG_INSTALL}\n"
-
-  git_prompt="$(parse_git_branch)"
-  export PS1="[\W] ${git_prompt}${COLOR_NONE}[\H] \n${homebrew_prompt} \$ "
-  setWindowTitle "${PWD/$HOME/~}"
-}
-export PROMPT_COMMAND=set_prompt

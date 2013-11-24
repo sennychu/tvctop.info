@@ -1,2 +1,2 @@
 echo "loading .profile......"
-#set -o vi 
+ if [ -r ~/.bashrc ]; then . ~/.bashrc; fi

@@ -55,17 +55,7 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 # Gzip-enabled `curl`
 alias gurl='curl --compressed'
 
-## IP addresses
-alias iP="dig +short myip.opendns.com @resolver1.opendns.com"
-alias lIp="ipconfig getifaddr en1"
-alias iPs="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 
-# Enhanced WHOIS lookups
-alias wHois="whois -h whois-servers.net"
-
-# View HTTP traffic
-alias sNiff="ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias hTtpdump="tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 ## Canonical hex dump; some systems have this symlinked
 command -v hd > /dev/null || alias hd="hexdump -C"
